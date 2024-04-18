@@ -1,12 +1,12 @@
 <html ng-app="app" ng-controller="Todo">
  <title>AngularJS - KB3/22 Example</title>
- <h1><!--input ng-model="myData"--></input>{{::todo.user}}</h1>
-<img width="20%" ng-src={{todo.userPhoto}}></img>
+ <h1><input ng-model="myData"></input>{{::todo.user}}</h1>
+<!--img width="20%" ng-src={{todo.userPhoto}}></img-->
 
 <table width="100%"class="table table-stripped">
 <tr ng-repeat="item in todo.items">
 <td>{{item.task}}</td>
-<td>{{item.status ? "Yes":"No"}}</td>
+<td>{{item.status ? "Yes":"No" | uppercase}}</td>
 </table>
 
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
