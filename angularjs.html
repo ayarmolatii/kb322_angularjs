@@ -1,6 +1,14 @@
 <html ng-app="app" ng-controller="Todo">
  <title>AngularJS - KB3/22 Example</title>
  <h1><!--input ng-model="myData"--></input>{{::todo.user}}</h1>
+<img width="20%" ng-src={{todo.userPhoto}}></img>
+
+<table>
+<tr ng-repeat="item in todo.items">
+<td>{{item.task}}</td>
+<td>{{item.status}}</td>
+</table>
+
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
  <script>
 (function() {
@@ -9,7 +17,7 @@
 	.controller("Todo",Doit)
 	.value("model",{
 		user:"Andrii",
-		userPhoto:"myphoto.jpg",
+		userPhoto:"myPhoto.jpg",
 		items:[
 			{task:"Require",status:true},
 			{task:"Develop",status:false},
