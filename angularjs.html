@@ -6,7 +6,7 @@
 <table width="100%"class="table table-stripped">
 <tr ng-repeat="item in todo.items">
 <td>{{item.task}}</td>
-<td>{{item.status}}</td>
+<td>{{item.status ? "Yes":"No"}}</td>
 </table>
 
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
