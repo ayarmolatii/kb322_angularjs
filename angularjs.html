@@ -1,6 +1,25 @@
-<html ng-app="app">
+<html ng-app="app" ng-controller="Todo">
  <title>AngularJS - KB3/22 Example</title>
- <!--h1><input ng-model="myData"></input>{{myData}}</h1-->
+ <h1><input ng-model="myData"></input>{{todo.user}}</h1>
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
- <script src="app.js"></script>
-</html>
+ <script>
+(function() {
+	"use strict";
+	angular.module("app",[])
+	.controller("Todo",Doit)
+	.value("model",{
+		user:"Andrii",
+		userPhoto:"myphoto.jpg",
+		items:[
+			{task:"Require",status:true},
+			{task:"Develop",status:false},
+			{task:"Test",status:false},
+			{task:"Operate",status:false}
+		]
+	});
+
+	function Doit($scope,model) {
+		$scope.todo = model;
+	};
+})();
+</script>
